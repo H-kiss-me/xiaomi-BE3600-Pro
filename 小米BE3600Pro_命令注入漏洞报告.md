@@ -167,7 +167,8 @@ Content-Length: 123
 stok = dcafe5e32021d91f59d3bd393fec2183
 ```
 
-![图1 登录获取 stok 会话令牌](images/1_login.png)
+<img width="2559" height="1527" alt="2" src="https://github.com/user-attachments/assets/49899144-361b-4648-9e20-d0dcb0584e60" />
+
 
 *图 1：Burp Suite 拦截登录请求，响应中返回 stok 会话令牌 `dcafe5e32021d91f59d3bd393fec2183`*
 
@@ -209,7 +210,8 @@ exprotocol = tcp
 
 接口返回 `code: 0`（成功），表明命令已提交执行。
 
-![图2 RCE payload 请求与响应](images/2_request.png)
+<img width="2559" height="1527" alt="4" src="https://github.com/user-attachments/assets/01630cf3-5221-4e34-907e-ff2487e6dba0" />
+
 
 *图 2：浏览器直接访问注入 URL，地址栏可见 `tgport=1%3Bid%3E%2Ftmp%2Fproof%3B%23` 编码后的注入参数，响应体返回 `{"code":0}` 表示命令已成功执行*
 
@@ -227,7 +229,8 @@ cat /tmp/proof
 uid=0(root) gid=0(root) groups=0(root)
 ```
 
-![图3 成功获取 root 权限 id 内容](images/3_result.jpg)
+<img width="2559" height="1527" alt="5" src="https://github.com/user-attachments/assets/bef9438a-0c88-4b08-93ac-b5bd624d77ae" />
+
 
 *图 3：FinalShell 中执行 `cat /tmp/proof`，输出 `uid=0(root) gid=0(root) groups=0(root)`，证明注入命令以 root 权限执行成功*
 
